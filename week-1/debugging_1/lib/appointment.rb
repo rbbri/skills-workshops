@@ -1,4 +1,5 @@
 require 'geocoder'
+require 'pry'
 # Understands somewhere I need to be at a particular time
 class Appointment
   attr_reader :time, :title
@@ -18,6 +19,7 @@ class Appointment
   attr_reader :location, :geocoder
 
   def geo_location
+    binding.pry
     geocoder.search(location)[0]
   end
 end

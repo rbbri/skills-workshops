@@ -1,4 +1,6 @@
 require 'appointment'
+require 'pry'
+require 'geocoder'
 
 describe Appointment do
   subject(:appointment) { described_class.new(time, "Test appointment", "50 Commercial Street London") }
